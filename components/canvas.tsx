@@ -114,17 +114,17 @@ export default function Canvas() {
         });
 
         editor.setEditorMap((past) => {
-            if (past) {
-              return {
-                ...Object.fromEntries(
-                  Object.entries(past).filter(
-                    (obj) => obj[1].id !== clickedObjectID
-                  )
-                ),
-              };
-            }
-            return {};
-          });
+          if (past) {
+            return {
+              ...Object.fromEntries(
+                Object.entries(past).filter(
+                  (obj) => obj[1].id !== clickedObjectID
+                )
+              ),
+            };
+          }
+          return {};
+        });
       }
     }
 

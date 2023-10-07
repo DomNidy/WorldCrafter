@@ -14,6 +14,14 @@ export enum EditorMode {
 }
 
 /**
+ * Object type which describes the state of the map, where objects are placed, etc.
+ */
+export type EditorMapData = Record<
+  string,
+  { x: number; y: number; kind: EditorObject; id: string }
+>;
+
+/**
  * Stores propeties of editor objects.
  *
  * One use case of this objects properties is using widht and height to automatically calculate placement offset
